@@ -10,12 +10,21 @@
   },
   "dependencies": {
     "expo": "~51.0.16",
+    "expo-image": "~1.12.12",
     "expo-status-bar": "~1.12.1",
+    "expo-web-browser": "~13.0.3",
     "react": "18.2.0",
-    "react-native": "0.74.2"
+    "react-native": "0.74.2",
+    "react-native-country-flag": "^2.0.2",
+    "react-native-gifted-charts": "^1.4.11",
+    "react-native-linear-gradient": "^2.8.3",
+    "react-native-paper": "^5.12.3",
+    "react-native-svg": "^15.3.0",
+    "react-native-vector-icons": "^10.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.20.0",
+    "patch-package": "^8.0.0"
   },
   "private": true
 }
