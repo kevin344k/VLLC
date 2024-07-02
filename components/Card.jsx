@@ -2,7 +2,7 @@ import { Pressable, StyleSheet, Text, View } from "react-native";
 import dataDeudaExtr from "../data/deuda_externa";
 import { LineChart } from "react-native-gifted-charts";
 import { openBrowserAsync } from "expo-web-browser";
-
+/* https://gifted-charts.web.app/  link page charts*/
 const Card = () => {
   const lineData = dataDeudaExtr;
   let urlSourceData = 

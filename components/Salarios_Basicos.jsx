@@ -5,7 +5,9 @@ import { openBrowserAsync } from "expo-web-browser";
 import { FontAwesome6 } from '@expo/vector-icons';
 import { Image } from 'expo-image';
 import  salarios  from "../data/salarios";
-
+import { Foundation } from '@expo/vector-icons';
+import { useState } from "react";
+import { Portal,Dialog,Button  } from "react-native-paper";
 const Salarios_Basicos = () => {
   let urlSourceINEC =
     "https://app.powerbi.com/view?r=eyJrIjoiNGUxZjQyMDUtMzg0Zi00MzI0LTk5NWEtY2JiMWUzM2YyYjdlIiwidCI6ImYxNThhMmU4LWNhZWMtNDQwNi1iMGFiLWY1ZTI1OWJkYTExMiJ9";
@@ -22,34 +24,43 @@ const sal_ind=salarios[1].independiente.ingreso_prom
 const ico_publ=salarios[2].publico.icono
 const part_publ=salarios[2].publico.participacion
 const sal_publ=salarios[2].publico.ingreso_prom
+const [visible, setVisible] = useState(false);
 
-    console.log(ico_ind);
+const showDialog = () => setVisible(true);
+
+const hideDialog = () => setVisible(false);
+let textDialog="¿Entre el sector Privado, Independiente y Público a cual le alcanza el sueldo para costear la canasta básica?. Sí, al sector público,¿Y quién financia al sector público o de donde surgen los ingresos del sector público?, Sí,de los impuestos del sector privado e independiente que son los que generan riqueza mediante la producción de un bien o servicio que un tercero usará. Si pudiste contestar estas preguntas ahora ya sabes en donde esta el problema."
+  
   return (
     <View style={styles.container}>
-      <Text style={styles.subTitle}>Empleo: may-24</Text>
+     <View style={styles.cardHeader}> 
+      <Text style={styles.subTitle}>Empleo</Text>
+      <Pressable onPress={showDialog}>
+         <Foundation name="info" size={16} color="gray" />
+         </Pressable></View>
       <View style={styles.containerColumn}>
       <View style={styles.subContainerItems}>
-          <Text> </Text>
+          
           <Image source={require('../assets/icons/worker_180555.png')} style={{ width: 35, height: 35,opacity:0,}} />
-          <Text style={{fontWeight:"bold"}}>Participación:</Text>
+     
           <Text style={{fontWeight:"bold"}}>Sueldo:</Text>
         </View>
         <View style={styles.subContainerItems}>
           <Text>Privado</Text>
           <Image source={require('../assets/icons/worker_180555.png')} style={{ width: 35, height: 35 }} />
-          <Text>{part_priv}</Text>
+      
           <Text>{sal_priv}</Text>
         </View>
         <View style={styles.subContainerItems}>
           <Text>Independiente</Text>
           <Image source={require('../assets/icons/briefcase_221938.png')} style={{ width: 35, height: 35 }} />
-          <Text>{part_ind}</Text>
+          
           <Text>{sal_ind}</Text>
         </View>
         <View style={styles.subContainerItems}>
           <Text>Público</Text>
           <Image source={require('../assets/icons/work_1584911.png')} style={{ width: 35, height: 35 }} />
-          <Text>{part_publ}</Text>
+         
           <Text>{sal_publ}</Text>
         </View>
      
@@ -65,6 +76,20 @@ const sal_publ=salarios[2].publico.ingreso_prom
         >
            <Text style={{color:"#0645AD"}}>INEC</Text>
         </Pressable>
+      </View>
+
+      <View>
+        <Portal>
+          <Dialog visible={visible} onDismiss={hideDialog}>
+            <Dialog.Title>¿Sabias que?</Dialog.Title>
+            <Dialog.Content>
+              <Text variant="bodyMedium">{textDialog}</Text>
+            </Dialog.Content>
+            <Dialog.Actions>
+              <Button onPress={hideDialog}>Aceptar</Button>
+            </Dialog.Actions>
+          </Dialog>
+        </Portal>
       </View>
 
 
@@ -85,6 +110,13 @@ const styles = StyleSheet.create({
     overflow: "hidden",
     borderRadius: 8,
     
+  },
+  cardHeader:{
+    width:"100%",
+    flexDirection:"row",
+    gap:8,
+    alignItems:"center",
+    justifyContent:"center",
   },
   urlSource: {
     flexDirection: "row",
