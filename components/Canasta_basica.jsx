@@ -32,7 +32,7 @@ let textDialog="La Canasta Familiar Básica (CFB) es un conjunto de bienes y ser
           <AntDesign name="caretright" size={12} color="gray" />
           <Text>Canasta Familiar Básica</Text>
          <Pressable onPress={showDialog}>
-         <Foundation name="info" size={16} color="gray" />
+         <Foundation name="info" size={16} color="#F7C600" />
          </Pressable>
         </View>
 

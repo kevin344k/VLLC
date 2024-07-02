@@ -23,7 +23,7 @@ console.log(movimientos);
         <DataTable.Title ></DataTable.Title>
       </DataTable.Header>
       {movimientos.map((item) => (
-        <DataTable.Row key={item.key}>
+        <DataTable.Row key={item.color}>
           <DataTable.Cell>  <FontAwesome name="circle" size={10} color={item.color} />  </DataTable.Cell>
           <DataTable.Cell style={{flex:2}} >{item.nameC}</DataTable.Cell>
           <DataTable.Cell style={{flex:1}}>{item.cantidad}</DataTable.Cell>

@@ -1,6 +1,4 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
-import { FontAwesome } from "@expo/vector-icons";
-import { AntDesign } from "@expo/vector-icons";
 import { openBrowserAsync } from "expo-web-browser";
 import { Surface } from "react-native-paper";
 import { Foundation } from "@expo/vector-icons";

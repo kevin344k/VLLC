@@ -4,25 +4,23 @@ import { AntDesign } from "@expo/vector-icons";
 import { openBrowserAsync } from "expo-web-browser";
 import { FontAwesome6 } from '@expo/vector-icons';
 import { Image } from 'expo-image';
-import  salarios  from "../data/salarios";
+import  {salarios}  from "../data/salarios";
 import { Foundation } from '@expo/vector-icons';
 import { useState } from "react";
 import { Portal,Dialog,Button  } from "react-native-paper";
 const Salarios_Basicos = () => {
+  console.log(salarios);
   let urlSourceINEC =
     "https://app.powerbi.com/view?r=eyJrIjoiNGUxZjQyMDUtMzg0Zi00MzI0LTk5NWEtY2JiMWUzM2YyYjdlIiwidCI6ImYxNThhMmU4LWNhZWMtNDQwNi1iMGFiLWY1ZTI1OWJkYTExMiJ9";
 
 
-const ico_priv=salarios[0].privado.icono
-const part_priv=salarios[0].privado.participacion
+
 const sal_priv=salarios[0].privado.ingreso_prom
 
-const ico_ind=salarios[1].independiente.icono
-const part_ind=salarios[1].independiente.participacion
+
 const sal_ind=salarios[1].independiente.ingreso_prom
 
-const ico_publ=salarios[2].publico.icono
-const part_publ=salarios[2].publico.participacion
+
 const sal_publ=salarios[2].publico.ingreso_prom
 const [visible, setVisible] = useState(false);
 
@@ -36,14 +34,14 @@ let textDialog="¿Entre el sector Privado, Independiente y Público a cual le al
      <View style={styles.cardHeader}> 
       <Text style={styles.subTitle}>Empleo</Text>
       <Pressable onPress={showDialog}>
-         <Foundation name="info" size={16} color="gray" />
+         <Foundation name="info" size={16} color="#F7C600" />
          </Pressable></View>
       <View style={styles.containerColumn}>
       <View style={styles.subContainerItems}>
           
           <Image source={require('../assets/icons/worker_180555.png')} style={{ width: 35, height: 35,opacity:0,}} />
      
-          <Text style={{fontWeight:"bold"}}>Sueldo:</Text>
+          <Text style={{fontWeight:"bold"}}>Sueldo{"\n"} (prom):</Text>
         </View>
         <View style={styles.subContainerItems}>
           <Text>Privado</Text>

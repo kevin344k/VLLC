@@ -12,7 +12,7 @@ import { Text } from "react-native";
 import Local from "./screens/Local";
 import Internacional from "./screens/ExtE";
 import Descargas from "./screens/Descargas";
-import Proyectos_Ley from "./screens/Proy_ley";
+import Asamblea from "./screens/Asamblea";
 import Acerca_de from "./screens/Acera_de";
 import { View, StyleSheet } from "react-native";
 import {
@@ -40,7 +40,7 @@ export default function Navigation() {
           name="Economía Internacional"
           component={Internacional}
         />
-        <Drawer.Screen name="Asamblea" component={Proyectos_Ley} />
+        <Drawer.Screen name="Asamblea" component={Asamblea} />
         <Drawer.Screen  name="Descargas" component={Descargas} />
         <Drawer.Screen  name="Acerca de..." component={Acerca_de} />
       </Drawer.Navigator>

@@ -5,42 +5,34 @@ const movimientos=[
     {
         "Category": "Revolución Ciudadana",
         "nameC": "Rev. Ciudadana",
-        "cantidad": "52",
-        "color": "#46A4DA",
+        "cantidad": "48",
+        "color": "#2676BB",
         "label": "Revolución Ciudadana",
         "url": "https://www.eluniverso.com/noticias/politica/conozca-a-los-51-legisladores-de-la-bancada-de-la-revolucion-ciudadana-nota"
     },
     {
         "Category": "Construye",
         "nameC": "Construye",
-        "cantidad": "29",
-        "color": "#0001FC",
+        "cantidad": "19",
+        "color": "#00FFFE",
         "label": "Construye",
         "url": "https://www.eluniverso.com/noticias/politica/estos-son-los-18-legisladores-del-movimiento-construye-nota"
     },
     {
-        "Category": "PSC-aliados",
+        "Category": "PSC",
         "nameC": "PSC",
-        "cantidad": "18",
-        "color": "#fbd80e",
-        "label": "PSC-aliados",
+        "cantidad": "16",
+        "color": "#FFFF01",
+        "label": "PSC",
         "url": "https://www.eluniverso.com/noticias/politica/estos-son-los-18-legisladores-del-bloque-psc-aliados-elegidos-en-los-comicios-anticipados-del-2023-nota"
     },
     {
         "Category": "ADN",
         "nameC": "ADN",
-        "cantidad": "14",
+        "cantidad": "26",
         "color": "#9C27B9",
         "label": "ADN",
         "url": "https://www.eluniverso.com/noticias/politica/estos-son-los-14-legisladores-de-la-alianza-oficialista-adn-que-comanda-el-presidente-electo-daniel-noboa-nota"
-    },
-    {
-        "Category": "Actuemos",
-        "nameC": "Actuemos",
-        "cantidad": "8",
-        "color": "#FF9300",
-        "label": "Actuemos",
-        "url": "https://www.eluniverso.com/noticias/politica/aqui-le-presentamos-a-los-ocho-legisladores-de-la-alianza-actuemos-nota"
     },
     {
         "Category": "Pachakutik",
@@ -53,19 +45,51 @@ const movimientos=[
     {
         "Category": "Claro que se puede",
         "nameC": "Claro que se puede",
-        "cantidad": "3",
-        "color": "#FFFF",
+        "cantidad": "2",
+        "color": "#FC0100",
         "label": "Claro que se puede",
         "url": "https://www.eluniverso.com/noticias/politica/conozca-a-los-tres-legisladores-que-obtuvo-la-alianza-claro-que-se-puede-nota"
     },
     {
-        "Category": "Independientes y grupos de minoría",
+        "Category": "Independientes",
         "nameC": "Independientes",
-        "cantidad": "8",
+        "cantidad": "7",
         "color": "#9E9E9E",
-        "label": "Independientes y grupos de minoría",
+        "label": "Independientes",
         "url": "https://www.eluniverso.com/noticias/politica/conozca-a-los-legisladores-chullos-los-que-vienen-de-grupos-de-minoria-o-locales-y-se-declaran-independientes-nota/"
-    }
+    },
+    {
+        "Category": "Avanza",
+        "nameC": "Avanza",
+        "cantidad": "2",
+        "color": "#41C1F0",
+        "label": "Avanza",
+        "url": "https://www.asambleanacional.gob.ec/es/pleno-asambleistas"
+    },
+    {
+        "Category": "Gente Buena",
+        "nameC": "Gente Buena",
+        "cantidad": "9",
+        "color": "#FFFFFF",
+        "label": "Gente Buena",
+        "url": "https://www.asambleanacional.gob.ec/es/pleno-asambleistas"
+    },
+    {
+        "Category": "Movimientos Provinciales",
+        "nameC": "Movimientos Provinciales",
+        "cantidad": "2",
+        "color": "#8B7216",
+        "label": "Movimientos Provinciales",
+        "url": "https://www.asambleanacional.gob.ec/es/pleno-asambleistas"
+    },
+    {
+        "Category": "Sociedad Patriótica",
+        "nameC": "Sociedad Patriótica",
+        "cantidad": "1",
+        "color": "#FD0101",
+        "label": "Sociedad Patriótica",
+        "url": "https://www.asambleanacional.gob.ec/es/pleno-asambleistas"
+    },
 ]
 
 export default movimientos
