@@ -71,67 +71,8 @@ let textDialog="En la Asamblea, ninguna de las fuerzas políticas tiene, por sí
   </View>
 
 
-      <Card_ley
-        urlCover={
-          "https://www.elcomercio.com/wp-content/uploads/2024/06/alimentos-ley-1024x683.jpg"
-        }
-        textContent={
-          "Comercializar en espacios públicos la leche cruda extraída directamente del animal no humano y cocinar o colocar animales no humanos vivos vertebrados o invertebrados en recipientes de agua hirviendo. Estas son algunas de las prohibiciones que se plantean en la Ley Orgánica para la Promoción, Protección y Defensa de los Derechos de los Animales no Humanos que actualmente es revisada en la Comisión de Biodiversidad y Recursos Naturales de la Asamblea Nacional."
-        }
-        textTitle={
-          "Estas son las 34 prohibiciones que constan en proyecto de ley que plantea no exhibir animales crudos y cocinados"
-        }
-        urlSource={
-          "https://www.eluniverso.com/noticias/economia/ley-defensa-derechos-animales-ecuador-prohibiciones-asados-hornado-nota/"
-        }
-        fecha={"Actualizado el 13 de junio, 2024"}
-      ></Card_ley>
 
-      <Card_ley
-        urlCover={
-          "https://www.elcomercio.com/wp-content/uploads/2024/06/alimentos-ley-1024x683.jpg"
-        }
-        textContent={
-          "Comercializar en espacios públicos la leche cruda extraída directamente del animal no humano y cocinar o colocar animales no humanos vivos vertebrados o invertebrados en recipientes de agua hirviendo. Estas son algunas de las prohibiciones que se plantean en la Ley Orgánica para la Promoción, Protección y Defensa de los Derechos de los Animales no Humanos que actualmente es revisada en la Comisión de Biodiversidad y Recursos Naturales de la Asamblea Nacional."
-        }
-        textTitle={
-          "Estas son las 34 prohibiciones que constan en proyecto de ley que plantea no exhibir animales crudos y cocinados"
-        }
-        urlSource={
-          "https://www.eluniverso.com/noticias/economia/ley-defensa-derechos-animales-ecuador-prohibiciones-asados-hornado-nota/"
-        }
-        fecha={"Actualizado el 13 de junio, 2024"}
-      ></Card_ley>
-      <Card_ley
-        urlCover={
-          "https://www.elcomercio.com/wp-content/uploads/2024/06/alimentos-ley-1024x683.jpg"
-        }
-        textContent={
-          "Comercializar en espacios públicos la leche cruda extraída directamente del animal no humano y cocinar o colocar animales no humanos vivos vertebrados o invertebrados en recipientes de agua hirviendo. Estas son algunas de las prohibiciones que se plantean en la Ley Orgánica para la Promoción, Protección y Defensa de los Derechos de los Animales no Humanos que actualmente es revisada en la Comisión de Biodiversidad y Recursos Naturales de la Asamblea Nacional."
-        }
-        textTitle={
-          "Estas son las 34 prohibiciones que constan en proyecto de ley que plantea no exhibir animales crudos y cocinados"
-        }
-        urlSource={
-          "https://www.eluniverso.com/noticias/economia/ley-defensa-derechos-animales-ecuador-prohibiciones-asados-hornado-nota/"
-        }
-        fecha={"Actualizado el 13 de junio, 2024"}
-      ></Card_ley>
-      <Card_ley
-        urlCover={
-          "https://www.elcomercio.com/wp-content/uploads/2024/06/alimentos-ley-1024x683.jpg"
-        }
-        textContent={
-          "Comercializar en espacios públicos la leche cruda extraída directamente del animal no humano y cocinar o colocar animales no humanos vivos vertebrados o invertebrados en recipientes de agua hirviendo. Estas son algunas de las prohibiciones que se plantean en la Ley Orgánica para la Promoción, Protección y Defensa de los Derechos de los Animales no Humanos que actualmente es revisada en la Comisión de Biodiversidad y Recursos Naturales de la Asamblea Nacional."
-        }
-        textTitle={
-          "Estas son las 34 prohibiciones que constan en proyecto de ley que plantea no exhibir animales crudos y cocinados"
-        }
-        urlSource={
-          "https://www.eluniverso.com/noticias/economia/ley-defensa-derechos-animales-ecuador-prohibiciones-asados-hornado-nota/"
-        }
-        fecha={"Actualizado el 13 de junio, 2024"}
-      ></Card_ley>
+   
     </View>
     </ScrollView>
   );
