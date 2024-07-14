@@ -29,6 +29,12 @@
       "eas": {
         "projectId": "8ed28ad5-2a79-440b-a711-02ef5569f3dd"
       }
-    }
+    },
+    "plugins": [
+    [  "expo-font",
+      {
+        "fonts":["fonts/PlayWrite.ttf"]
+      }]
+    ]
   }
 }

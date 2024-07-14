@@ -1,13 +1,32 @@
 
 import { ScrollView, StatusBar, StyleSheet, Text, View } from "react-native";
 
-import { Provider as PaperProvider } from "react-native-paper";
+import { Provider as PaperProvider,  MD3LightTheme as DefaultTheme, } from "react-native-paper";
 import  Navigation  from "./Navigation";
 
 
 export default function App() {
+
+  const theme = {
+    ...DefaultTheme,
+    // Specify custom property
+    myOwnProperty: true,
+    // Specify custom property in nested object
+    colors: {
+      ...DefaultTheme.colors,
+      secondaryContainer: "#ffc800",
+      primary:"#d19200",
+     
+     
+    },
+    roundness:0
+  };
+
+
+
+
   return (
-    <PaperProvider >
+    <PaperProvider theme={theme}>
       <Navigation></Navigation>
       <StatusBar></StatusBar>
     </PaperProvider>
