@@ -12,24 +12,29 @@ import Internacional from "./screens/ExtE";
 import Descargas from "./screens/Descargas";
 import Asamblea from "./screens/Asamblea";
 import Acerca_de from "./screens/Acera_de";
-import { View, StyleSheet, Dimensions } from "react-native";
+import { View, StyleSheet, Dimensions, BackHandler, Alert,Image } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-
+import * as Clipboard from 'expo-clipboard';
 import {
   Divider,
   Surface,
+  Portal,
+  Modal,
+  Text,
   Avatar,
   Button,
-  Badge,
+  Badge,  PaperProvider,
   Drawer as PaperDrawer,
   Text as PaperText,
 } from "react-native-paper";
 import Noticias from "./screens/Noticias";
 
-import { useFonts,OpenSans_400Regular } from "@expo-google-fonts/open-sans";
+import { useFonts, OpenSans_400Regular } from "@expo-google-fonts/open-sans";
 
 const Drawer = createDrawerNavigator();
 const windowHeight = Dimensions.get("window").height;
+const windowWidth = Dimensions.get("window").width;
+
 export default function Navigation() {
   let [fontsLoaded] = useFonts({
     OpenSans_400Regular,
@@ -38,6 +43,7 @@ export default function Navigation() {
   if (!fontsLoaded) {
     return null;
   }
+
 
   return (
     <NavigationContainer>
@@ -66,13 +72,30 @@ export default function Navigation() {
 
 const MenuItems = ({ navigation }) => {
   const [active, setActive] = useState("second");
-
+  const [visible, setVisible] = useState(false);
+  const showModal = () => setVisible(true);
+  const hideModal = () => setVisible(false);
+  const containerStyle = {backgroundColor: 'white', padding: 20,width:(windowWidth-30),justifyContent:"center",margin:"auto",gap:10,textAlign:"center"};
   console.log(active);
+
+
+
+  const copyToClipboard = async (text) => {
+    await Clipboard.setStringAsync(text);
+    Alert.alert("BINANCE ID copiado")
+  };
+
+
+
+
+
+
+
   return (
     <View style={styles.container}>
       <LinearGradient
         style={styles.containerAvatar}
-        colors={["#ffc800", "#ffc800", "#ffc800", "#d19200"]}
+        colors={["#ffc800", "#ffc800", "#ffc800"]}
       >
         <Surface style={styles.surface} elevation={5}>
           <Avatar.Image
@@ -144,32 +167,49 @@ const MenuItems = ({ navigation }) => {
         <Divider></Divider>
       </View>
       <View style={styles.buttonsExit}>
-        <Button style={{ color:"white", borderRadius:50,}}
+        <Button
+          style={{ backgroundColor: "#F25951", borderRadius: 50 }}
           icon="exit-to-app"
-          mode="outlined"
-          onPress={() => console.log("Pressed")}
+          mode="contained"
+          onPress={() => BackHandler.exitApp()}
         >
           Salir
         </Button>
-        <Button style={{ color:"white", borderRadius:50,}}
-          icon="gift-outline"
+        <Button
+          style={{ backgroundColor: "#d19200", borderRadius: 50 }}
+          icon="gift"
           mode="contained"
-          onPress={() => console.log("Pressed")}
+          onPress={showModal}
         >
           Donar
         </Button>
-       
       </View>
+      
+      <Portal >
+        <Modal
+          visible={visible}
+          onDismiss={hideModal}
+         contentContainerStyle={containerStyle}
+        >
+          <Image  style={styles.imageQr}   source={require("./assets/images/qrBiananceID.png")}>
+
+          </Image>
+        <Divider></Divider>
+        <Text style={{textAlign:"center"}}>Click para copiar el BINANCE ID</Text>
+          <Button icon="content-copy" mode="contained" onPress={()=>copyToClipboard("470939603")}>
+          470 939 603
+  </Button>
+        </Modal>
+      </Portal>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-
     justifyContent: "space-between",
     height: windowHeight,
-    paddingBottom:10,
+    paddingBottom: 20,
   },
   containerAvatar: {
     width: 200,
@@ -185,7 +225,7 @@ const styles = StyleSheet.create({
     top: 0,
   },
   containerItems: {
-    marginTop: 150,
+    marginTop: 170,
     width: "100%",
     gap: 8,
   },
@@ -213,6 +253,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     left: 70,
     top: 8,
+    backgroundColor: "#F25951",
   },
   buttonsExit: {
     width: "100%",
@@ -222,4 +263,10 @@ const styles = StyleSheet.create({
 
     flexDirection: "row",
   },
+  imageQr:{
+width:"100%",
+height:450,
+margin:"auto"
+  },
+
 });
