@@ -1,5 +1,5 @@
 import { ScrollView, StyleSheet, Text, View } from "react-native";
-import Card from "../components/Card";
+import Ded_Ext from "../components/Ded_Ext";
 import Canasta_basica from "../components/Canasta_basica";
 import Salarios_Basicos from "../components/Salarios_Basicos";
 import AsammbleistasSueldo from "../components/AsambleistasSueldo";
@@ -12,7 +12,7 @@ const Local = () => {
           <Canasta_basica></Canasta_basica>
           <Salarios_Basicos></Salarios_Basicos>
           <AsammbleistasSueldo></AsammbleistasSueldo>
-          <Card></Card>
+          <Ded_Ext></Ded_Ext>
         </View>
       </ScrollView>
     </View>
@@ -23,10 +23,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
 
-    padding: 10,
+  paddingVertical:20,
+  paddingHorizontal:10,
   },
   container2: {
-    gap: 12,
+    gap:10,
     justifyContent: "center",
     alignItems: "center",
   },
