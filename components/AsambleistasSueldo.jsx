@@ -89,9 +89,11 @@ const AsammbleistasSueldo = () => {
               móviles,
             </Text>
           </View>
+          <Divider></Divider>
         </Card.Content>
-        <Divider></Divider>
+   
         <Card.Actions>
+       
           <Button mode="outlined" onPress={showModal}>
             Ver Gráfico{" "}
           </Button>

@@ -28,7 +28,7 @@ export default function App() {
   return (
     <PaperProvider theme={theme}>
       <Navigation></Navigation>
-      <StatusBar></StatusBar>
+      <StatusBar backgroundColor="#89510a"></StatusBar>
     </PaperProvider>
 
 

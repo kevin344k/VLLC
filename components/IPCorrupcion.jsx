@@ -1,10 +1,10 @@
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, View } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
 import { openBrowserAsync } from "expo-web-browser";
-import { Surface } from "react-native-paper";
+import { Divider, Surface } from "react-native-paper";
 import { Foundation } from "@expo/vector-icons";
-import { Portal, Dialog, Button, Card } from "react-native-paper";
+import { Portal, Dialog, Button, Card, Text } from "react-native-paper";
 import { useState } from "react";
 import CountryFlag from "react-native-country-flag";
 const IPCorrupcion = () => {
@@ -20,94 +20,98 @@ const IPCorrupcion = () => {
     "El IPC clasifica a 180 países y territorios de todo el mundo según sus niveles percibidos de corrupción en el sector público, en una escala de 0 (altamente corrupto) a 100 (muy limpio).Observa los países que tiene los 5 puntajes mas bajos y notarás que tienen algo en común.";
 
   return (
-    <Surface style={styles.container} elevation={4}>
-      <Text style={styles.subTitle}>Indice de Percepción de Corrupción en el sector Público</Text>
-
-      <View style={styles.containerAll}>
-        <View style={styles.containerRowEc}>
-        <FontAwesome name="circle" size={10} color="#EE4123" />
-          <CountryFlag isoCode="ec" size={22} />
-          <View style={styles.subContainerItems}>
-         
-            <Text>Ecuador </Text>
-            <Text>34/</Text>
-            <Text>100</Text>
-            <Pressable onPress={showDialog}>
-              <Foundation name="info" size={16} color="gray" />
-            </Pressable>
-          </View>
+    <Card style={styles.container}>
+      <Card.Content>
+        <View style={styles.title}>
+          <Text variant="titleMedium">Indice de Percepción de Corrupción</Text>
+          <Pressable onPress={showDialog}>
+            <Foundation name="info" size={24} color="#d19200" />
+          </Pressable>
         </View>
 
-        <View style={styles.containerRow}>
-          <View style={styles.containerColumn}>
-            <Text style={styles.textTitleRank}>Top 5 puntajes altos</Text>
-            <View style={styles.flagRow}>
-              <FontAwesome name="circle" size={10} color="#fdf001" />
-              <CountryFlag isoCode="dk" size={14} />
-              <Text>90 Dinamarca</Text>
-            </View>
-            <View style={styles.flagRow}>
-              <FontAwesome name="circle" size={10} color="#FFD405" />
-              <CountryFlag isoCode="fi" size={14} />
-              <Text>87 Finlandia</Text>
-            </View>
-            <View style={styles.flagRow}>
-              <FontAwesome name="circle" size={10} color="#FFD405" />
-              <CountryFlag isoCode="nz" size={14} />
-              <Text>85 Nueva Zelanda</Text>
-            </View>
-            <View style={styles.flagRow}>
-              <FontAwesome name="circle" size={10} color="#FFD405" />
-              <CountryFlag isoCode="no" size={14} />
-              <Text>84 Noruega</Text>
-            </View>
-            <View style={styles.flagRow}>
-              <FontAwesome name="circle" size={10} color="#FFD405" />
-              <CountryFlag isoCode="sg" size={14} />
-              <Text>83 Singapur</Text>
+        <View style={styles.containerAll}>
+          <View style={styles.containerRowEc}>
+            <FontAwesome name="circle" size={10} color="#EE4123" />
+            <CountryFlag isoCode="ec" size={22} />
+            <View style={styles.subContainerItems}>
+                <Text>34</Text>
+              <Text>Ecuador</Text>
+            
             </View>
           </View>
-          <View style={styles.containerColumn}>
-            <Text style={styles.textTitleRank}>Top 5 puntajes bajos</Text>
-            <View style={styles.flagRow}>
-              <FontAwesome name="circle" size={10} color="#AF161B" />
-              <CountryFlag isoCode="ye" size={18} />
-              <Text>16 Yemen</Text>
+
+          <View style={styles.containerRow}>
+            <View style={styles.containerColumn}>
+              <Text style={styles.textTitleRank}>Top 5 puntajes altos</Text>
+              <View style={styles.flagRow}>
+                <FontAwesome name="circle" size={10} color="#fdf001" />
+                <CountryFlag isoCode="dk" size={14} />
+                <Text>90 Dinamarca</Text>
+              </View>
+              <View style={styles.flagRow}>
+                <FontAwesome name="circle" size={10} color="#FFD405" />
+                <CountryFlag isoCode="fi" size={14} />
+                <Text>87 Finlandia</Text>
+              </View>
+              <View style={styles.flagRow}>
+                <FontAwesome name="circle" size={10} color="#FFD405" />
+                <CountryFlag isoCode="nz" size={14} />
+                <Text>85 N. Zelanda</Text>
+              </View>
+              <View style={styles.flagRow}>
+                <FontAwesome name="circle" size={10} color="#FFD405" />
+                <CountryFlag isoCode="no" size={14} />
+                <Text>84 Noruega</Text>
+              </View>
+              <View style={styles.flagRow}>
+                <FontAwesome name="circle" size={10} color="#FFD405" />
+                <CountryFlag isoCode="sg" size={14} />
+                <Text>83 Singapur</Text>
+              </View>
             </View>
-            <View style={styles.flagRow}>
-            <FontAwesome name="circle" size={10} color="#AF161B" />
-              <CountryFlag isoCode="ss" size={18} />
-              <Text>13 S. Sudan</Text>
-            </View>
-            <View style={styles.flagRow}>
-               <FontAwesome name="circle" size={10} color="#AF161B" />
-              <CountryFlag isoCode="sy" size={18} />
-              <Text>13 Syria</Text>
-            </View>
-            <View style={styles.flagRow}>
-               <FontAwesome name="circle" size={10} color="#AF161B" />
-              <CountryFlag isoCode="ve" size={18} />
-              <Text>13 Venezuela</Text>
-            </View>
-            <View style={styles.flagRow}>
-               <FontAwesome name="circle" size={10} color="#AF161B" />
-              <CountryFlag isoCode="so" size={18} />
-              <Text>11 Somalia</Text>
+            <View style={styles.containerColumn}>
+              <Text style={styles.textTitleRank}>Top 5 puntajes bajos</Text>
+              <View style={styles.flagRow}>
+                <FontAwesome name="circle" size={10} color="#AF161B" />
+                <CountryFlag isoCode="ye" size={18} />
+                <Text>16 Yemen</Text>
+              </View>
+              <View style={styles.flagRow}>
+                <FontAwesome name="circle" size={10} color="#AF161B" />
+                <CountryFlag isoCode="ss" size={18} />
+                <Text>13 S. Sudan</Text>
+              </View>
+              <View style={styles.flagRow}>
+                <FontAwesome name="circle" size={10} color="#AF161B" />
+                <CountryFlag isoCode="sy" size={18} />
+                <Text>13 Syria</Text>
+              </View>
+              <View style={styles.flagRow}>
+                <FontAwesome name="circle" size={10} color="#AF161B" />
+                <CountryFlag isoCode="ve" size={18} />
+                <Text>13 Venezuela</Text>
+              </View>
+              <View style={styles.flagRow}>
+                <FontAwesome name="circle" size={10} color="#AF161B" />
+                <CountryFlag isoCode="so" size={18} />
+                <Text>11 Somalia</Text>
+              </View>
             </View>
           </View>
         </View>
-      </View>
+        <Divider></Divider>
+      </Card.Content>
 
-      <View style={styles.urlSource}>
-        <Text>Fuente:</Text>
-        <Pressable
+      <Card.Actions>
+        <Button
+          mode="contained"
           onPress={() => {
             openBrowserAsync(urlSource);
           }}
         >
-          <Text style={{ color: "#0645AD" }}>Transparency International</Text>
-        </Pressable>
-      </View>
+          Transparency International
+        </Button>
+      </Card.Actions>
 
       <View>
         <Portal>
@@ -122,7 +126,7 @@ const IPCorrupcion = () => {
           </Dialog>
         </Portal>
       </View>
-    </Surface>
+    </Card>
   );
 };
 
@@ -132,28 +136,6 @@ const styles = StyleSheet.create({
   container: {
     width: "95%",
     backgroundColor: "#fff",
-    borderWidth: 1,
-    borderColor: "#f4f4f4",
-    alignItems: "center",
-    justifyContent: "center",
-    overflow: "hidden",
-    borderRadius: 8,
-    padding: 12,
-  },
-  urlSource: {
-    flexDirection: "row",
-    paddingLeft: 8,
-    width: "100%",
-    marginTop: 12,
-  },
-  subTitle: {
-    fontSize: 16,
-    fontWeight: "bold",
-    color: "gray",
-    textAlign: "center",
-    justifyContent: "center",
-    width: "100%",
-    paddingLeft: 15,
   },
   subContainerItems: {
     flexDirection: "row",
@@ -164,8 +146,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     width: "100%",
-    gap: 10,
-    paddingHorizontal: 15,
+    gap: 5,
+  
     justifyContent: "space-between",
   },
   containerRowEc: {
@@ -196,4 +178,8 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginVertical: 7,
   },
+  title:{
+    flexDirection:"row",
+    gap:8,
+  }
 });

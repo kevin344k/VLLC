@@ -1,8 +1,7 @@
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, View } from "react-native";
 import { openBrowserAsync } from "expo-web-browser";
-import { Surface } from "react-native-paper";
 import { Foundation } from "@expo/vector-icons";
-import { Portal, Dialog, Button,Card } from "react-native-paper";
+import { Portal, Dialog, Button,Card,Text,Divider } from "react-native-paper";
 import { useState } from "react";
 import CountryFlag from "react-native-country-flag";
 const IDLE = () => {
@@ -17,21 +16,25 @@ const IDLE = () => {
   let textDialog = "Ecuador se ubica en la posición 115 de un total de 176 países, con un puntaje de 55/100, catalogado como un país mayormente no libre para invertir, esto debido a sus políticas de estado. Observa  el top de los 5 últimos países y notarás que tienen algo en común.";
 
   return (
-    <Surface style={styles.container} elevation={4}>
-      <Text style={styles.subTitle}>
+    <Card style={styles.container} >
+      <Card.Content>
+        <View style={styles.title}>
+            <Text variant="titleMedium" >
         Indice de Libertades Económicas 
       </Text>
+      <Pressable onPress={showDialog}>
+              <Foundation name="info" size={24} color="#d19200" />
+            </Pressable>
+        </View>
 
-      <View style={styles.containerAll}>
+  <View style={styles.containerAll}>
         <View style={styles.containerRowEc}>
           <CountryFlag isoCode="ec" size={22} />
           <View style={styles.subContainerItems}>
+           
+            <Text>115 </Text>
             <Text>Ecuador </Text>
-            <Text>115/</Text>
-            <Text>176</Text>
-            <Pressable onPress={showDialog}>
-              <Foundation name="info" size={16} color="gray" />
-            </Pressable>
+         
           </View>
         </View>
 
@@ -87,18 +90,27 @@ const IDLE = () => {
      
       </View>
 
-      <View style={styles.urlSource}>
-        <Text>Fuente:</Text>
-        <Pressable
+<Divider
+></Divider>
+ 
+      </Card.Content>
+   
+
+    
+<Card.Actions>
+     <Button mode="contained"
           onPress={() => {
             openBrowserAsync(urlSourceINEC);
           }}
         >
-          <Text style={{ color: "#0645AD" }}>The Heritage Foundation</Text>
-        </Pressable>
-      </View>
+          The Heritage Foundation
+        </Button>
+  
+</Card.Actions>
+     
+       
+   
 
-      <View>
         <Portal>
           <Dialog visible={visible} onDismiss={hideDialog}>
             <Dialog.Title>¿Sabias que?</Dialog.Title>
@@ -110,8 +122,8 @@ const IDLE = () => {
             </Dialog.Actions>
           </Dialog>
         </Portal>
-      </View>
-    </Surface>
+ 
+    </Card>
   );
 };
 
@@ -121,28 +133,13 @@ const styles = StyleSheet.create({
   container: {
     width: "95%",
     backgroundColor: "#fff",
-    borderWidth: 1,
-    borderColor: "#f4f4f4",
-    alignItems: "center",
-    justifyContent: "center",
-    overflow: "hidden",
-    borderRadius: 8,
-    padding:12,
+  
   },
   urlSource: {
     flexDirection: "row",
     paddingLeft: 8,
     width: "100%",
     marginTop:12,
-  },
-  subTitle: {
-    fontSize: 16,
-    fontWeight: "bold",
-    color: "gray",
-    textAlign: "center",
-    justifyContent: "center",
-    width: "100%",
-    paddingLeft: 15,
   },
   subContainerItems: {
     flexDirection: "row",
@@ -182,4 +179,10 @@ const styles = StyleSheet.create({
   textTitleRank:{
     fontWeight:"bold",
     marginVertical:7,
-}});
+},
+title:{
+  flexDirection:"row",
+  gap:8,
+}
+
+});

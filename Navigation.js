@@ -28,7 +28,7 @@ import {
   Text as PaperText,
 } from "react-native-paper";
 import Noticias from "./screens/Noticias";
-
+import Glosario from "./screens/Glosario";
 import { useFonts, OpenSans_400Regular } from "@expo-google-fonts/open-sans";
 
 const Drawer = createDrawerNavigator();
@@ -58,6 +58,7 @@ export default function Navigation() {
         <Drawer.Screen name="Micro economía" component={Local} />
         <Drawer.Screen name="Macro economía" component={Internacional} />
         <Drawer.Screen name="Asamblea" component={Asamblea} />
+        <Drawer.Screen name="Glosario" component={Glosario} />
         <Drawer.Screen name="Descargas" component={Descargas} />
         <Drawer.Screen name="Acerca de..." component={Acerca_de} />
       </Drawer.Navigator>
@@ -85,12 +86,6 @@ const MenuItems = ({ navigation }) => {
     Alert.alert("BINANCE ID copiado")
   };
 
-
-
-
-
-
-
   return (
     <View style={styles.container}>
       <LinearGradient
@@ -111,6 +106,7 @@ const MenuItems = ({ navigation }) => {
         <View style={styles.badgeContainer}>
           <PaperDrawer.Item
             label="Noticias"
+            icon={"email-newsletter"}
             active={active === "first"}
             onPress={() => {
               setActive("first");
@@ -124,6 +120,7 @@ const MenuItems = ({ navigation }) => {
 
         <PaperDrawer.Item
           label="Micro economía"
+          icon={"account-hard-hat"}
           active={active === "second"}
           onPress={() => {
             setActive("second");
@@ -133,6 +130,7 @@ const MenuItems = ({ navigation }) => {
         <PaperDrawer.Item
           active={active === "third"}
           label="Macro economía"
+          icon={"web"}
           onPress={() => {
             setActive("third");
 
@@ -142,25 +140,36 @@ const MenuItems = ({ navigation }) => {
         <PaperDrawer.Item
           active={active === "fourth"}
           label="Asamblea"
+          icon={"account-group"}
           onPress={() => {
             setActive("fourth");
             navigation.navigate("Asamblea");
           }}
         ></PaperDrawer.Item>
-        <PaperDrawer.Item
+          <PaperDrawer.Item
           active={active === "fifth"}
-          label="Acerca de ..."
+          label="Glosario"
+          icon={"book-open-blank-variant"}
           onPress={() => {
             setActive("fifth");
-            navigation.navigate("Acerca de...");
+            navigation.navigate("Glosario");
           }}
         ></PaperDrawer.Item>
         <PaperDrawer.Item
           active={active === "sixth"}
+          icon={"information-variant"}
+          label="Acerca de ..."
+          onPress={() => {
+            setActive("sixth");
+            navigation.navigate("Acerca de...");
+          }}
+        ></PaperDrawer.Item>
+        <PaperDrawer.Item
+          active={active === "seventh"}
           label="Descargas"
           icon="download"
           onPress={() => {
-            setActive("sixth");
+            setActive("seventh");
             navigation.navigate("Descargas");
           }}
         ></PaperDrawer.Item>
@@ -251,7 +260,7 @@ const styles = StyleSheet.create({
   },
   badgeNews: {
     position: "absolute",
-    left: 70,
+    left: 110,
     top: 8,
     backgroundColor: "#F25951",
   },

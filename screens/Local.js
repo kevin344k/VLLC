@@ -6,16 +6,18 @@ import AsammbleistasSueldo from "../components/AsambleistasSueldo";
 
 const Local = () => {
   return (
+<ScrollView>
     <View style={styles.container}>
-      <ScrollView>
+      
         <View style={styles.container2}>
           <Canasta_basica></Canasta_basica>
           <Salarios_Basicos></Salarios_Basicos>
           <AsammbleistasSueldo></AsammbleistasSueldo>
           <Ded_Ext></Ded_Ext>
         </View>
-      </ScrollView>
+    
     </View>
+      </ScrollView>
   );
 };
 export default Local;
