@@ -13,3 +13,4 @@ titulos de card: variant="titleSmall"
  [text](https://gifted-charts.web.app/)
  #los componentes usados provienen de la libreria:
  [text](https://reactnativepaper.com/)
+

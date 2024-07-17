@@ -1,9 +1,9 @@
 import { ScrollView, StyleSheet,View } from "react-native";
 
 import { Card,Text,Button } from "react-native-paper";
-import CardGlosary  from "../components/CardGlosary";
+
 import words from "../data/glosary";
-import CradGlosary from "../components/CardGlosary";
+import CardGlosary from "../components/CardGlosary";
 
 const Glosario = () => {
 
@@ -17,7 +17,8 @@ console.log(words.length);
       <View style={styles.container}>
         {
             words.map((item)=>{
-                <CradGlosary data={item}></CradGlosary>
+                console.log(item);
+             return   <CardGlosary data={item}></CardGlosary>
             })
         }
       </View>
@@ -28,7 +29,7 @@ export default Glosario;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-
+gap:10,
     paddingVertical: 20,
     paddingHorizontal: 10,
   },
