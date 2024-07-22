@@ -18,7 +18,7 @@ console.log(words.length);
         {
             words.map((item)=>{
                 console.log(item);
-             return   <CardGlosary data={item}></CardGlosary>
+             return   <CardGlosary key={item.id} data={item}></CardGlosary>
             })
         }
       </View>

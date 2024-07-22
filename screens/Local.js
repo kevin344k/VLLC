@@ -6,6 +6,7 @@ import AsammbleistasSueldo from "../components/AsambleistasSueldo";
 import Graph_line from "../components/Graph_line";
 import PIB_percapita from "../data/PIB_percapita";
 import Poblacion from "../components/Poblacion";
+
 const Local = () => {
   return (
 <ScrollView>

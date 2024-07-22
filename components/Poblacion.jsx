@@ -185,9 +185,11 @@ const styles = StyleSheet.create({
   containerCard: {
     backgroundColor: "#fff",
     width: "95%",
+
   },
   containerTitle: {
     flexDirection: "row",
+    paddingVertical:10,
   },
   subContainerItems: {
     flexDirection: "row",

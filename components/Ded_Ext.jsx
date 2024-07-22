@@ -25,6 +25,7 @@ const Ded_Ext = () => {
             hideRules
             dataPointsColor="#d19200"
             yAxisLabelSuffix=""
+            curved
             isAnimated
           ></LineChart>
         </View>
