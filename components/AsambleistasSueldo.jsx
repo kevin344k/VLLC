@@ -142,7 +142,7 @@ const AsammbleistasSueldo = () => {
           <Card>
             <Card.Content>
               <Text>
-                Los asambleístas tienen derecho a contratar asesores para
+                Los asambleístas tienen "derecho" a contratar asesores para
                 establecer su equipo de trabajo y estos funcionarios reciben una
                 remuneración aparte. En la última Asamblea, un asesor de nivel 1
                 ganaba $ 3.014 mensuales y un asesor de nivel 2, $ 2.454.

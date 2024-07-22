@@ -3,7 +3,9 @@ import Ded_Ext from "../components/Ded_Ext";
 import Canasta_basica from "../components/Canasta_basica";
 import Salarios_Basicos from "../components/Salarios_Basicos";
 import AsammbleistasSueldo from "../components/AsambleistasSueldo";
-
+import Graph_line from "../components/Graph_line";
+import PIB_percapita from "../data/PIB_percapita";
+import Poblacion from "../components/Poblacion";
 const Local = () => {
   return (
 <ScrollView>
@@ -11,9 +13,11 @@ const Local = () => {
       
         <View style={styles.container2}>
           <Canasta_basica></Canasta_basica>
+          <Poblacion></Poblacion>
           <Salarios_Basicos></Salarios_Basicos>
           <AsammbleistasSueldo></AsammbleistasSueldo>
           <Ded_Ext></Ded_Ext>
+          <Graph_line dataLine={PIB_percapita} title="PIB per cápita en Ecuador" subTitle="En USD" url="https://datacommons.org/place/country/ECU?hl=es" titleUrl="Banco Mundial" dataMax={8000} sections={4} yLAbelText={["0", "2", "4", "6", "8"]} ySufix=" Mil" ></Graph_line>
         </View>
     
     </View>

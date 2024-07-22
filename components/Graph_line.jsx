@@ -1,31 +1,37 @@
 import { Pressable, StyleSheet, View, Dimensions } from "react-native";
-import dataDeudaExtr from "../data/deuda_externa";
+
 import { LineChart } from "react-native-gifted-charts";
 import { Card, Text, Button } from "react-native-paper";
 import { openBrowserAsync } from "expo-web-browser";
 /* https://gifted-charts.web.app/  link page charts*/
-const Ded_Ext = () => {
-  const lineData = dataDeudaExtr;
-  let urlSourceData =
-    "https://datos.bancomundial.org/indicator/DT.DOD.DECT.CD?locations=EC";
+const Graph_line = (data) => {
+  console.log(data.dataLine);
+  const lineData = data.dataLine;
+
+  let urlSourceData = data.url;
   const windowWidth = Dimensions.get("window").width;
   return (
     <Card style={styles.container}>
       <Card.Content>
         <Text style={styles.textTitle} variant="titleMedium">
-          Deuda Externa(en mil millones){" "}
+          {data.title}
+        </Text>
+        <Text style={styles.textTitle} variant="titleSmall">
+          {data.subTitle}
         </Text>
         <View>
           <LineChart
-            width={220}
-            maxValue={70}
+            width={230}
             data={lineData}
-            noOfSections={5}
             color="#d19200"
-            hideRules
             dataPointsColor="#d19200"
-            yAxisLabelSuffix=""
+            maxValue={8000}
+            noOfSections={data.sections}
+            yAxisLabelTexts={data.yLAbelText}
+            yAxisLabelSuffix={data.ySufix}
             isAnimated
+            curved
+            hideRules
           ></LineChart>
         </View>
       </Card.Content>
@@ -36,14 +42,14 @@ const Ded_Ext = () => {
             openBrowserAsync(urlSourceData);
           }}
         >
-          Banco Mundial
+          {data.titleUrl}
         </Button>
       </Card.Actions>
     </Card>
   );
 };
 
-export default Ded_Ext;
+export default Graph_line;
 
 const styles = StyleSheet.create({
   container: {

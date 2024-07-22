@@ -2,7 +2,7 @@
   "expo": {
     "name": "vllc",
     "slug": "vllc",
-    "version": "2.2.0",
+    "version": "2.3.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -20,7 +20,7 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.kevin344k.vllc",
-      "versionCode": 2
+      "versionCode": 4
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -30,11 +30,6 @@
         "projectId": "8ed28ad5-2a79-440b-a711-02ef5569f3dd"
       }
     },
-    "plugins": [
-    [  "expo-font",
-      {
-        "fonts":["fonts/PlayWrite.ttf"]
-      }]
-    ]
+    "plugins": []
   }
 }
