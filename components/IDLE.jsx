@@ -151,6 +151,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     width: "100%",
     gap: 10,
+    marginBottom:10,
     paddingHorizontal: 15,
     justifyContent:"space-between",
   },containerRowEc:{

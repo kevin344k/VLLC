@@ -30,7 +30,7 @@ import {
 import Noticias from "./screens/Noticias";
 import Glosario from "./screens/Glosario";
 import { useFonts, OpenSans_400Regular } from "@expo-google-fonts/open-sans";
-
+import Indices from "./screens/Indices";
 const Drawer = createDrawerNavigator();
 const windowHeight = Dimensions.get("window").height;
 const windowWidth = Dimensions.get("window").width;
@@ -55,6 +55,7 @@ export default function Navigation() {
         drawerContent={(props) => <MenuItems {...props}></MenuItems>}
       >
         <Drawer.Screen name="Noticias" component={Noticias} />
+        <Drawer.Screen name="Indices" component={Indices} />
         <Drawer.Screen name="Micro economía" component={Local} />
         <Drawer.Screen name="Macro economía" component={Internacional} />
         <Drawer.Screen name="Asamblea" component={Asamblea} />
@@ -117,6 +118,16 @@ const MenuItems = ({ navigation }) => {
 
           <Badge style={styles.badgeNews}>2</Badge>
         </View>
+
+        <PaperDrawer.Item
+          label="Indices"
+          icon={"seal"}
+          active={active === "eight"}
+          onPress={() => {
+            setActive("eight");
+            navigation.navigate("Indices");
+          }}
+        ></PaperDrawer.Item>
 
         <PaperDrawer.Item
           label="Micro economía"
@@ -236,7 +247,7 @@ const styles = StyleSheet.create({
   containerItems: {
     marginTop: 170,
     width: "100%",
-    gap: 8,
+    gap: 1,
   },
   textVLLC: {
     width: 160,

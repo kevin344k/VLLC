@@ -18,7 +18,7 @@ import {
 } from "react-native-paper";
 
 const Salarios_Basicos = () => {
-  console.log(salarios);
+
   let urlSourceINEC =
     "https://app.powerbi.com/view?r=eyJrIjoiNGUxZjQyMDUtMzg0Zi00MzI0LTk5NWEtY2JiMWUzM2YyYjdlIiwidCI6ImYxNThhMmU4LWNhZWMtNDQwNi1iMGFiLWY1ZTI1OWJkYTExMiJ9";
 

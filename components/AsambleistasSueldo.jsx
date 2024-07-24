@@ -29,7 +29,7 @@ const AsammbleistasSueldo = () => {
   let urlSource =
     "https://www.eluniverso.com/noticias/politica/cuanto-es-el-sueldo-de-un-asambleista-y-que-otros-beneficios-reciben-nota/";
 
-  console.log(salariosAsambleistas);
+
 
   return (
     <>

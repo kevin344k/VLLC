@@ -5,7 +5,7 @@ import { Card, Text, Button } from "react-native-paper";
 import { openBrowserAsync } from "expo-web-browser";
 /* https://gifted-charts.web.app/  link page charts*/
 const Graph_line = (data) => {
-  console.log(data.dataLine);
+
   const lineData = data.dataLine;
 
   let urlSourceData = data.url;
@@ -25,7 +25,7 @@ const Graph_line = (data) => {
             data={lineData}
             color="#d19200"
             dataPointsColor="#d19200"
-            maxValue={8000}
+            maxValue={data.dataMax}
             noOfSections={data.sections}
             yAxisLabelTexts={data.yLAbelText}
             yAxisLabelSuffix={data.ySufix}

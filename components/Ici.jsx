@@ -7,23 +7,23 @@ import { Foundation } from "@expo/vector-icons";
 import { Portal, Dialog, Button, Card, Text } from "react-native-paper";
 import { useState } from "react";
 import CountryFlag from "react-native-country-flag";
-const IPCorrupcion = () => {
+const Ici = () => {
   const [visible, setVisible] = useState(false);
 
   const showDialog = () => setVisible(true);
 
   const hideDialog = () => setVisible(false);
 
-  let urlSource = "https://www.transparency.org/en/cpi/2023";
+  let urlSource = "https://www.libertadyprogreso.org/politicas-publicas/indices-de-calidad-institucional-historico/";
 
   let textDialog =
-    "El IPC clasifica a 180 países y territorios de todo el mundo según sus niveles percibidos de corrupción en el sector público, en una escala de 0 (altamente corrupto) a 100 (muy limpio).Observa los países que tiene los 5 puntajes mas bajos y notarás que tienen algo en común.";
+    "El Índice de Calidad Institucional (ICI) es una herramienta que coteja ocho indicadores de organismos internacionales y le otorga un puntaje a 183 países. A mayor puntaje mayor es la calidad institucional, lo que redunda en mayor seguridad para el resguardo de los derechos de sus habitantes.";
 
   return (
     <Card style={styles.container}>
       <Card.Content>
         <View style={styles.title}>
-          <Text variant="titleMedium">Indice de Percepción de Corrupción</Text>
+          <Text variant="titleMedium">Indice de Calidad Institucional 2023</Text>
           <Pressable onPress={showDialog}>
             <Foundation name="info" size={24} color="#d19200" />
           </Pressable>
@@ -31,10 +31,10 @@ const IPCorrupcion = () => {
 
         <View style={styles.containerAll}>
           <View style={styles.containerRowEc}>
-            <FontAwesome name="circle" size={10} color="#EE4123" />
+
             <CountryFlag isoCode="ec" size={22} />
             <View style={styles.subContainerItems}>
-                <Text>34</Text>
+                <Text>105</Text>
               <Text>Ecuador</Text>
             
             </View>
@@ -44,57 +44,57 @@ const IPCorrupcion = () => {
             <View style={styles.containerColumn}>
               <Text style={styles.textTitleRank}>Top 5 mejores</Text>
               <View style={styles.flagRow}>
-                <FontAwesome name="circle" size={10} color="#fdf001" />
+               
                 <CountryFlag isoCode="dk" size={14} />
-                <Text>90 Dinamarca</Text>
+                <Text>1 Dinamarca</Text>
               </View>
               <View style={styles.flagRow}>
-                <FontAwesome name="circle" size={10} color="#FFD405" />
-                <CountryFlag isoCode="fi" size={14} />
-                <Text>87 Finlandia</Text>
+               
+                <CountryFlag isoCode="ch" size={14} />
+                <Text>2 Suiza</Text>
               </View>
               <View style={styles.flagRow}>
-                <FontAwesome name="circle" size={10} color="#FFD405" />
+               
                 <CountryFlag isoCode="nz" size={14} />
-                <Text>85 N. Zelanda</Text>
+                <Text>3 N. Zelanda</Text>
               </View>
               <View style={styles.flagRow}>
-                <FontAwesome name="circle" size={10} color="#FFD405" />
+               
+                <CountryFlag isoCode="fi" size={14} />
+                <Text>4 Finlandia</Text>
+              </View>
+              <View style={styles.flagRow}>
+               
                 <CountryFlag isoCode="no" size={14} />
-                <Text>84 Noruega</Text>
-              </View>
-              <View style={styles.flagRow}>
-                <FontAwesome name="circle" size={10} color="#FFD405" />
-                <CountryFlag isoCode="sg" size={14} />
-                <Text>83 Singapur</Text>
+                <Text>5 Noruega</Text>
               </View>
             </View>
             <View style={styles.containerColumn}>
               <Text style={styles.textTitleRank}>Top 5 peores</Text>
               <View style={styles.flagRow}>
-                <FontAwesome name="circle" size={10} color="#AF161B" />
-                <CountryFlag isoCode="ye" size={18} />
-                <Text>16 Yemen</Text>
-              </View>
-              <View style={styles.flagRow}>
-                <FontAwesome name="circle" size={10} color="#AF161B" />
-                <CountryFlag isoCode="ss" size={18} />
-                <Text>13 S. Sudan</Text>
-              </View>
-              <View style={styles.flagRow}>
-                <FontAwesome name="circle" size={10} color="#AF161B" />
+               
                 <CountryFlag isoCode="sy" size={18} />
-                <Text>13 Syria</Text>
+                <Text>179 Siria</Text>
               </View>
               <View style={styles.flagRow}>
-                <FontAwesome name="circle" size={10} color="#AF161B" />
+               
+                <CountryFlag isoCode="ye" size={18} />
+                <Text>180 Yemen</Text>
+              </View>
+              <View style={styles.flagRow}>
+               
+                <CountryFlag isoCode="er" size={18} />
+                <Text>181 Eritrea </Text>
+              </View>
+              <View style={styles.flagRow}>
+               
                 <CountryFlag isoCode="ve" size={18} />
-                <Text>13 Venezuela</Text>
+                <Text>182 Venezuela</Text>
               </View>
               <View style={styles.flagRow}>
-                <FontAwesome name="circle" size={10} color="#AF161B" />
-                <CountryFlag isoCode="so" size={18} />
-                <Text>11 Somalia</Text>
+               
+                <CountryFlag isoCode="kp" size={18} />
+                <Text>183 N. Korea</Text>
               </View>
             </View>
           </View>
@@ -109,7 +109,7 @@ const IPCorrupcion = () => {
             openBrowserAsync(urlSource);
           }}
         >
-          Transparency International
+          RELIAL
         </Button>
       </Card.Actions>
 
@@ -130,11 +130,11 @@ const IPCorrupcion = () => {
   );
 };
 
-export default IPCorrupcion;
+export default Ici;
 
 const styles = StyleSheet.create({
   container: {
-    width: "95%",
+   
     backgroundColor: "#fff",
   },
   subContainerItems: {
@@ -146,9 +146,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     width: "100%",
-    gap: 5,
-    marginBottom:10,
-    justifyContent: "space-between",
+marginBottom:10,
+  
+    justifyContent: "space-around",
   },
   containerRowEc: {
     flexDirection: "row",

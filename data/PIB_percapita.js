@@ -21,7 +21,7 @@ const PIB_percapita= [
 {value:1789.2,date:1979,label:"1979",dataPointText:"1,789.2",  },
 {value:2197.8,date:1980,label:"1980",dataPointText:"2,197.8",  },
 {value:2611.2,date:1981,label:"1981",dataPointText:"2,611.2",  },
-{value:2324.8,date:1982,label:"1982",dataPointText:"2,324.8",  } ,
+{value:2324.8,date:1982,label:"1982",dataPointText:"2,324.8",  },
 {value:1950.0,date:1983,label:"1983",dataPointText:"1,950.0",  },
 {value:1874.3,date:1984,label:"1984",dataPointText:"1,874.3",  },
 {value:1853.0,date:1985,label:"1985",dataPointText:"1,853.0",  },

@@ -25,6 +25,15 @@ const Descargas = () => {
           }
           cardTitle={"IPC 2023[Ingles]"}
         ></Card_onlyCover>
+         <Card_onlyCover
+          urlCover={
+            "https://relial.org/wp-content/uploads/2023/05/Captura-de-Pantalla-2023-05-16-a-las-6.34.23-789x1024.png"
+          }
+          urlSource={
+            "https://static.libertadyprogreso.org/uploads/2023/05/Relial_ICI-2023-Web.pdf"
+          }
+          cardTitle={"ICI 2023[Esp]"}
+        ></Card_onlyCover>
         <Card_onlyCover
           urlCover={
             "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Bastiat.jpg/220px-Bastiat.jpg"
