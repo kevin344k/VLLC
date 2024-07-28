@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
-import { Text, Card, DataTable, Button } from "react-native-paper";
-import { StyleSheet, ScrollView,View } from "react-native";
+import { Text, Card, DataTable, Button, Surface } from "react-native-paper";
+import { StyleSheet, ScrollView, View } from "react-native";
 import gasto_pub from "../data/gasto_pub";
 
 const Gasto_Publico = () => {
@@ -32,46 +32,40 @@ const Gasto_Publico = () => {
   };
 
   return (
-    <View>
-      <Card style={styles.container}>
-  
-          <Card.Content>
-            <Text variant="titleSmall" style={{ textAlign: "center" }}>
-              PROFORMA DEL PRESUPUESTO GENERAL DEL ESTADO CONSOLIDADO POR
-              ORIENTACION DEL GASTO GASTOS (US DOLARES) Ejercicio: 2024
-            </Text>
+    <Surface elevation={3}>
+      <View style={styles.container}>
+        <Card.Content>
+          <Text variant="titleSmall" style={{ textAlign: "center" }}>
+            PROFORMA DEL PRESUPUESTO GENERAL DEL ESTADO CONSOLIDADO POR
+            ORIENTACION DEL GASTO GASTOS (US DOLARES) Ejercicio: 2024
+          </Text>
+        </Card.Content>
 
-        
-          </Card.Content>
-   <ScrollView>
-          <View >
-        
-          <ScrollView horizontal>
-        
-              <DataTable >
-                <DataTable.Header>
-                  <DataTable.Title>Sección</DataTable.Title>
-                  <DataTable.Title>Entidad</DataTable.Title>
-                  <DataTable.Title numeric sortDirection="ascending">
-                    Valor
-                  </DataTable.Title>
-                </DataTable.Header>
-                {arrSort()}
-              </DataTable>
-            </ScrollView>
-       
+        <View>
+          <DataTable>
+            <DataTable.Header>
+              <DataTable.Title>Sección</DataTable.Title>
+              <DataTable.Title>Entidad</DataTable.Title>
+              <DataTable.Title numeric sortDirection="ascending">
+                Valor
+              </DataTable.Title>
+            </DataTable.Header>
+
+            <View style={{ height: 200 }}>
+              <ScrollView scrollEnabled>{arrSort()}</ScrollView>
             </View>
-        </ScrollView>
-      </Card>
-    </View>
+          </DataTable>
+        </View>
+      </View>
+    </Surface>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     width: "95%",
-height:500,
-overflow:"scroll",
+    height: 500,
+    overflow: "scroll",
     backgroundColor: "#ffff",
   },
 });

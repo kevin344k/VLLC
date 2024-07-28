@@ -18,6 +18,13 @@ const Descargas = () => {
         ></Card_onlyCover>
         <Card_onlyCover
           urlCover={
+            "https://www.economicsandpeace.org/wp-content/uploads/2024/06/report-cover-414-585-gpi-2024.jpg"
+          }
+          urlSource={"https://www.economicsandpeace.org/wp-content/uploads/2024/06/GPI-2024-web.pdf"}
+          cardTitle={"Global Peace Index 2024 [Ingles]"}
+        ></Card_onlyCover>
+        <Card_onlyCover
+          urlCover={
             "https://images.transparencycdn.org/images/Report_CPI2023_English_Cover.jpg?auto=compress&fit=crop&&w=264"
           }
           urlSource={
