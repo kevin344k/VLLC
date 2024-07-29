@@ -2,7 +2,7 @@ const data = [
   {
     key: 1,
     num: "001",
-    Entidad_Publica: "Asamblea Nacional",
+    Entidad_Publica: "ASAMBLEA NACIONAL",
     proforma: 50849765.62,
   },
   {
@@ -94,6 +94,59 @@ const data = [
       "DIRECCION GENERAL DE REGISTRO CIVIL IDENTIFICACION Y CEDULACION",
     proforma: 67595852.31,
   },
+  {
+    key: 16,
+    num: "052",
+    Entidad_Publica: "POLICIA NACIONAL",
+    proforma: 1433562131.58,
+  },
+  {
+    key: 17,
+    num: "057",
+    Entidad_Publica:
+      "DIRECCION NACIONAL DE LA POLICIA JUDICIAL",
+    proforma: 5442717.82,
+  },
+   {
+    key: 18,
+    num: "058",
+    Entidad_Publica:
+      "DIRECCION NACIONAL DE SALUD DE LA POLICIA NACIONAL",
+    proforma: 25133121.88,
+  },
+   {
+    key: 19,
+    num: "061",
+    Entidad_Publica:
+      "MINISTERIO DE LA MUJER Y DERECHOS HUMANOS",
+    proforma: 13228756.45,
+  },
+   {
+    key: 20,
+    num: "064",
+    Entidad_Publica:
+      "INSTITUTO NACIONAL DE ESTADISTICAS Y CENSOS",
+    proforma: 17556144.67,
+  },
+   {
+    key: 21,
+    num: "067",
+    Entidad_Publica:
+      "SECRETARIA TECNICA DE GESTION INMOBILIARIA DEL SECTOR PUBLICO",
+    proforma: 32028251.43,
+  },
+
+  /*
+
+
+
+
+
+
+
+
+
+*/
 ];
 
 export default data;

@@ -34,6 +34,12 @@ const Graph_line = (data) => {
             hideRules
           ></LineChart>
         </View>
+       {
+        data.note==""?"":( <View>
+          
+          <Text variant="labelMedium">{data.note}</Text>
+        </View>)
+       }
       </Card.Content>
       <Card.Actions>
         <Button

@@ -8,11 +8,11 @@ import { NavigationContainer } from "@react-navigation/native";
 //screens
 
 import Local from "./screens/Local";
-import Internacional from "./screens/ExtE";
+import Empresas_Publicas from "./screens/Empresas_Publicas";
 import Descargas from "./screens/Descargas";
 import Asamblea from "./screens/Asamblea";
 import Acerca_de from "./screens/Acera_de";
-import { View, StyleSheet, Dimensions, BackHandler, Alert,Image } from "react-native";
+import { View, StyleSheet,StatusBar, Dimensions, BackHandler, Alert,Image } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import * as Clipboard from 'expo-clipboard';
 import {
@@ -57,7 +57,7 @@ export default function Navigation() {
         <Drawer.Screen name="Noticias" component={Noticias} />
         <Drawer.Screen name="Indices" component={Indices} />
         <Drawer.Screen name="Micro economía" component={Local} />
-        <Drawer.Screen name="Macro economía" component={Internacional} />
+        <Drawer.Screen name="Empresas Públicas" component={Empresas_Publicas} />
         <Drawer.Screen name="Asamblea" component={Asamblea} />
         <Drawer.Screen name="Glosario" component={Glosario} />
         <Drawer.Screen name="Descargas" component={Descargas} />
@@ -78,7 +78,7 @@ const MenuItems = ({ navigation }) => {
   const showModal = () => setVisible(true);
   const hideModal = () => setVisible(false);
   const containerStyle = {backgroundColor: 'white', padding: 20,width:(windowWidth-30),justifyContent:"center",margin:"auto",gap:10,textAlign:"center"};
-  console.log(active);
+
 
 
 
@@ -89,6 +89,7 @@ const MenuItems = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
+          <StatusBar backgroundColor="#89510a"></StatusBar>
       <LinearGradient
         style={styles.containerAvatar}
         colors={["#ffc800", "#ffc800", "#ffc800"]}
@@ -140,12 +141,12 @@ const MenuItems = ({ navigation }) => {
         ></PaperDrawer.Item>
         <PaperDrawer.Item
           active={active === "third"}
-          label="Macro economía"
+          label="Empresas Públicas"
           icon={"web"}
           onPress={() => {
             setActive("third");
 
-            navigation.navigate("Macro economía");
+            navigation.navigate("Empresas Públicas");
           }}
         ></PaperDrawer.Item>
         <PaperDrawer.Item

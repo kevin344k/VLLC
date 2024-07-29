@@ -8,6 +8,7 @@ import PIB_percapita from "../data/PIB_percapita";
 import Poblacion from "../components/Poblacion";
 import PIB_Ec from "../data/PIB_EC";
 import Gasto_Publico from "../components/Gasto_Publico";
+import inflarion_annual from "../data/inflation_annual";
 const Local = () => {
   return (
     <ScrollView>
@@ -41,6 +42,17 @@ const Local = () => {
             sections={4}
             yLAbelText={["0", "2", "4", "6", "8"]}
             ySufix=" Mil"
+          ></Graph_line>
+          <Graph_line
+            dataLine={inflarion_annual}
+            title={"VARIACIÓN PORCENTUAL ANUAL DEL ÍNDICE GENERAL NACIONAL"}
+            subTitle={"INFLACIÓN  ANUAL"}
+            sections={4}
+            yLAbelText={["0", "25", "50", "75", "100"]}
+            url="https://www.ecuadorencifras.gob.ec/indice-de-precios-al-consumidor/"
+            titleUrl="Ecuador en cifras"
+            ySufix="%"
+            note="*Desde el 9 de septiembre de 2000, la moneda de curso legal en Ecuador es el Dólar USA."
           ></Graph_line>
           <Gasto_Publico></Gasto_Publico>
         </View>

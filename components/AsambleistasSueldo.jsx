@@ -15,7 +15,7 @@ import {
   Divider,
 } from "react-native-paper";
 
-console.log(salariosAsambleistas);
+
 const AsammbleistasSueldo = () => {
   const [visible, setVisible] = useState(false);
   const windowWidth = Dimensions.get("window").width;
